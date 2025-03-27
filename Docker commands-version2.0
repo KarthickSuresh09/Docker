@@ -1,0 +1,31 @@
+it will list all the containers
+docker ps
+
+
+docker run -d nginx
+
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+root@ip-172-31-11-30:/home/ubuntu# docker run -d nginx
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+6e909acdb790: Pull complete 
+5eaa34f5b9c2: Pull complete 
+417c4bccf534: Pull complete 
+e7e0ca015e55: Pull complete 
+373fe654e984: Pull complete 
+97f5c0f51d43: Pull complete 
+c22eb46e871a: Pull complete 
+Digest: sha256:124b44bfc9ccd1f3cedf4b592d4d1e8bddb78b51ec2ed5056c52d3692baebc19
+Status: Downloaded newer image for nginx:latest
+bc0c18626ef56bb9e38b252d8d66df1ce57d1e0322c741db3cc210e99938d3ff
+
+
+
+
+ps -ef
+ps -aux 
+ps -aux | grep -i nginx 
+(this parent process)root        3306  0.0  0.1  11456  7424 ?        Ss   08:36   0:00 nginx: master process nginx -g daemon off;
+(this worker process)message+    3353  0.0  0.0  11920  3052 ?        S    08:36   0:00 nginx: worker process
+(this worker process)message+    3354  0.0  0.0  11920  3052 ?        S    08:36   0:00 nginx: worker process
+
