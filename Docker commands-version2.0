@@ -29,3 +29,12 @@ ps -aux | grep -i nginx
 (this worker process)message+    3353  0.0  0.0  11920  3052 ?        S    08:36   0:00 nginx: worker process
 (this worker process)message+    3354  0.0  0.0  11920  3052 ?        S    08:36   0:00 nginx: worker process
 
+
+killing the process 
+kill -9 processID
+
+
+#1; We created a NGINX Conatiner ===>#: List down the conatiner docker ps ======># grep Nginx process ps command ====>
+#Kill the NGINX Process =====>#When we killed the processthe conatiner also got killed ======>With this, Can I say thatCOnatiner is NOTHINg but and OS Process ===>
+This is what Really a COnatiner is =======>Conatiner# Conatiner is NOTHING but an OSprocess, that behaves like a VM =======>Using the LiNUX kernel feature of NS and Cgroup
+
