@@ -1,6 +1,4 @@
-Step1 Docker install command :
-# sudo apt  install docker.io
-
+prerequests for installing docker for realtime work
 # Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
@@ -14,6 +12,16 @@ echo \
   $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
+
+
+
+
+ Docker install command :
+# sudo apt  install docker.io
+
+         OR
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 
 
