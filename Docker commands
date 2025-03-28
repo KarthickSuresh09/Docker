@@ -90,4 +90,8 @@ docker ps
 telling Docker to run or start a container from the NGINX image
 docker run -d nginx
 
+If you want to your reset a docker and it will delete container and images(DON'T USE THIS COMMAND IN PROD SERVER)
+docker system prune --all
 
+it will show the docker image
+docker images
