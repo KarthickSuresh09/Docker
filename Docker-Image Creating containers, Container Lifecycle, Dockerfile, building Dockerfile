@@ -65,3 +65,5 @@ Successfully tagged my-node-app:latest
 
 
 ==> Step4
+run the command 
+docker run -d image name
