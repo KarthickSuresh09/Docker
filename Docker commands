@@ -83,3 +83,11 @@ Global Options:
   -v, --version            Print version information and quit
 
 Run 'docker COMMAND --help' for more information on a command.
+
+If you want to list all containers
+docker ps
+
+telling Docker to run or start a container from the NGINX image
+docker run -d nginx
+
+
