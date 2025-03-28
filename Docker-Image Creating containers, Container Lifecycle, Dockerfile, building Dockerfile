@@ -4,11 +4,11 @@ Docker architecture
 * docker hub
 
 creating IMAGE
-Step 1:
+==> Step 1:
 cloneing git repo my-node-app
 git clone https://github.com/KarthickSuresh09/my-node-app.git
 
-Step 2:
+==> Step 2:
 creating the docker file "vi Dockerfile"
 inside the docker file 
 FROM node:13-alpine
@@ -17,3 +17,32 @@ COPY package*.json /usr/app
 COPY app/* /usr/app
 RUN npm install
 CMD ["node", "server.js"]
+
+
+==> Step 3:
+build the docker image
+docker build -t my-node-app .
+root@ip-172-31-11-30:/home/ubuntu/mynodeApp/my-node-app# docker build -t my-node-app .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  3.509MB
+Step 1/6 : FROM node:13-alpine
+13-alpine: Pulling from library/node
+cbdbe7a5bc2a: Pull complete 
+780514bed1ad: Pull complete 
+5d74fb112a7d: Pull complete 
+4b9536424fa1: Pull complete 
+Digest: sha256:527c70f74817f6f6b5853588c28de33459178ab72421f1fb7b63a281ab670258
+Status: Downloaded newer image for node:13-alpine
+ ---> 8216bf4583a5
+Step 2/6 : WORKDIR /usr/app
+ ---> Running in 853c3d055ea1
+ ---> Removed intermediate container 853c3d055ea1
+ ---> 2eeb7b9ac779
+Step 3/6 : COPY package*.json /usr/app
+When using COPY with more than one source file, the destination must be a directory and end with a /
+
+
+==> Step4
