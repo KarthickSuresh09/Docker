@@ -4,6 +4,7 @@ Docker architecture
 * docker hub
 
 creating IMAGE
+Collection of layer is an image
 ==> Step 1:
 cloneing git repo my-node-app
 git clone https://github.com/KarthickSuresh09/my-node-app.git
