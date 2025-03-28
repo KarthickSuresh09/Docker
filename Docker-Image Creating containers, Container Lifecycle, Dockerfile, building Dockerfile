@@ -3,3 +3,14 @@ Docker architecture
 * docker demon
 * docker hub
 
+creating IMAGE
+Step 1:
+cloneing git repo my-node-app
+git clone https://github.com/KarthickSuresh09/my-node-app.git
+
+Step 2:
+creating the docker file "vi Dockerfile"
+inside the docker file 
+FROM node:13-alpine
+WORKDIR /usr/app
+COPY package*.json /usr/app
