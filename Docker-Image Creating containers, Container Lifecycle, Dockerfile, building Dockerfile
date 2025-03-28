@@ -69,8 +69,3 @@ run the command
 docker run -d image name
 
 
-
-#1 Write a Python Code =========>  Sample web app
-#2: We will create Dockerfile
-#3: Create image
-#4: Launch Container
