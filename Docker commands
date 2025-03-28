@@ -107,3 +107,4 @@ docker rm CONTAIER ID OR CONTAINER NAME
 
 It will remove the image
 docker rmi IMAGE ID OR IMAGE NAME
+
