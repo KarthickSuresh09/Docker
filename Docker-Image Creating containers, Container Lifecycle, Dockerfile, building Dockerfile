@@ -14,3 +14,6 @@ inside the docker file
 FROM node:13-alpine
 WORKDIR /usr/app
 COPY package*.json /usr/app
+COPY app/* /usr/app
+RUN npm install
+CMD ["node", "server.js"]
