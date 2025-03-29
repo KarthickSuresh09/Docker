@@ -47,7 +47,11 @@ EXPOSE 5000
 CMD ["python", "app.py"]
 
 
-Dockerfile reference
+
+
+______________________
+|Dockerfile reference|
+----------------------
 
 
 ADD	        :Add local or remote files and directories.
