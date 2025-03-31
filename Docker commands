@@ -151,3 +151,5 @@ docker network create --driver bridge my-net
 
 docker run -dit --name con100 --network mynet alpine ash
 
+This shoutcut will exit from container 
+ctrl + p + q
