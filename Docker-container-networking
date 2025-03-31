@@ -47,6 +47,10 @@ EXPOSE 5000
 CMD ["python", "app.py"]
 
 
+* Step 5 
+build the image
+docker build -t myapp
+
 
 
 ______________________
