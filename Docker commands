@@ -117,5 +117,5 @@ docker run "image name" ===> this method will lock cmd
 docker run -d "image name" ===> this method will not lock cmd
 
 
-
+This command will assigned port no numeber for machine
 docker run -p 5000:5000 myapp
