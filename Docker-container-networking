@@ -52,6 +52,10 @@ build the image
 docker build -t myapp
 
 
+* Step 6
+this command will assigned port no numeber for machine after you can check in browser
+docker run -p 5000:5000 myapp
+
 
 ______________________
 |Dockerfile reference|
