@@ -52,9 +52,12 @@ build the image
 docker build -t myapp
 
 
-* Step 6
+* Step 6 ==> this is port mapping method
 this command will assigned port no numeber for machine after you can check in browser
 docker run -p 5000:5000 myapp
+=> this method will not block CMD
+docker run -d -p 3000:3000 myapp
+
 
 
 ______________________
