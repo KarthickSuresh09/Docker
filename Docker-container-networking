@@ -59,7 +59,6 @@ docker run -p 5000:5000 myapp
 docker run -d -p 3000:3000 myapp
 
 
-
 ______________________
 |Dockerfile reference|
 ----------------------
