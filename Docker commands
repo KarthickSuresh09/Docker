@@ -137,3 +137,17 @@ docker run -dit --name con1 alpine ash
 If you want to go inside container and you can use container name or ID
 docker attach con1
 
+If you want to exit the container use this  and if you exited the container it will automaticall stop container
+exit
+
+This  command is container to container communication 
+ping "container IP"
+ctrl + C
+
+
+This command  will create own network bridge 
+docker network create --driver bridge my-net
+
+
+docker run -dit --name con100 --network mynet alpine ash
+
