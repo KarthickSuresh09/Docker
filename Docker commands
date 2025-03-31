@@ -117,5 +117,23 @@ docker run "image name" ===> this method will lock cmd
 docker run -d "image name" ===> this method will not lock cmd
 
 
-This command will assigned port no numeber for machine
+This command will assigned port no numeber for machine ==> this is port mapping method
 docker run -p 5000:5000 myapp
+=> this method will not block CMD
+docker run -d -p 3000:3000 myapp
+
+It will show docker network 
+docker network ls
+
+It will inspect docker network detailed
+docker network inspect "bridge"
+docker network inspect "host"
+docker network inspect "null"
+
+
+docker run -dit --name con1 alpine ash
+
+
+If you want to go inside container and you can use container name or ID
+docker attach con1
+
