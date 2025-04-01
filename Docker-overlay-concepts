@@ -1,1 +1,28 @@
+                                                      Scaling
+                                                         ||
+                                                         ||
+                                                         ||
+              =============================================================================================
+              ||                                                                                         ||
+              ||                                                                                         ||
+              ||                                                                                         ||
+     Horizantal Scaling                                                                          Vertical Scaling
+              ||                                                                                         ||
+              ||                                                                                         ||
+============================                                                                 ========================
+||                        ||                                                                 ||                    ||
+||                        ||                                                                 ||                    ||
+Scale In              Scale Out                                                          Scale Up              Scale Down
 
+
+* Vertical Scaling means: it will increas the server capicty like t2.micro → m5.large increase RAM & CPU Single point of failure
+* Horizantal Scaling means: it will increas the server capicty like Add more servers	Fault-tolerant (multiple servers)	
+
+
+
+----------------               ----------------
+|   Contral    |               |    Data       |
+|              |==============>|               |
+|  Plane       |               |    Plane      |
+|              |               |               |
+----------------               -----------------
