@@ -153,3 +153,7 @@ docker run -dit --name con100 --network mynet alpine ash
 
 This shoutcut will exit from container 
 ctrl + p + q
+
+
+This command will create container and assign the volume of the storage
+docker run -d --name nginx_container -v nginx_logs:/var/log/nginx nginx
