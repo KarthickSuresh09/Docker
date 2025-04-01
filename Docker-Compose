@@ -26,3 +26,17 @@ Scale In              Scale Out                                                 
 |  Plane       |               |    Plane      |
 |              |               |               |
 ----------------               -----------------
+
+
+
+What is Docker Compose?
+Docker Compose is a tool used to define and manage multi-container Docker applications. 
+It allows you to run multiple Docker containers with a single YAML configuration file 
+(docker-compose.yml).
+
+
+
+1. Insatll docker compose ==> 2. What is your app----> Docker file ==> 
+3. Write the YAML file ==> 4. Run Docker compose run this YAML file
+
+
