@@ -157,3 +157,13 @@ ctrl + p + q
 
 This command will create container and assign the volume of the storage
 docker run -d --name nginx_container -v nginx_logs:/var/log/nginx nginx
+
+
+inspect is the command of check whatever you want to check detailed
+doncker inspect "---"
+
+
+this command also enter to conatiner
+docker exec -it "containername" bash
+i====> Interactive
+t====> Terimnal
