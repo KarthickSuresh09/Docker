@@ -26,3 +26,20 @@ this command also navigate to conatiner bash
 docker exec -it "containername"
 i====> Interactive
 t====> Terimnal
+
+docker inspect volume my_volume
+
+[
+    {
+        "CreatedAt": "2025-04-01T06:06:51Z",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/my_volume/_data",
+        "Name": "my_volume",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+
+
+
