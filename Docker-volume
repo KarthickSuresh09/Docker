@@ -1,2 +1,6 @@
 This command will create docker volume
 docker volume create ngnix_logs
+
+
+This command will create container and assign the volume of the storage
+docker run -d --name nginx_container -v nginx_logs:/var/log/nginx nginx
