@@ -4,7 +4,8 @@ docker volume create ngnix_logs
 
 This command will create container and assign the volume of the storage
 docker run -d --name nginx_container -v nginx_logs:/var/log/nginx nginx
-
+                                         ||
+                                       Volume name
 
 inspect is the command of check whatever you want to check detailed
 doncker inspect "nginx_logs"
