@@ -167,3 +167,6 @@ this command also enter to conatiner
 docker exec -it "containername" bash
 i====> Interactive
 t====> Terimnal
+
+
+docker inspect volume my_volume
