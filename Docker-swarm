@@ -44,6 +44,7 @@ To add a manager to this swarm, run 'docker swarm join-token manager' and follow
 Confiration of worker node
 This node joined a swarm as a worker.
 
+
 Master Ste4 :
 again to check worker added or not
 ID                            HOSTNAME           STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
@@ -52,3 +53,34 @@ t316qsy839nzepdl1mx58ggue *   ip-172-31-11-30    Ready     Active         Leader
 
 private IP Master Node: 172.31.11.30
 private IP Worker Node: 172.31.39.127
+
+
+Master Step 5 :
+We are creating services not creating directly cluster
+docker service create --name nginx --replicas 3 -p 80:80 nginx
+
+name = nginx
+--replicas 3 = creating copies 
+80:80 = metioned port 
+nginx = mentioned image
+
+Master & Worker Step 6:
+verify the containers 
+Master :
+docker service ls 
+root@ip-172-31-11-30:/home/ubuntu# docker service ls
+ID             NAME      MODE         REPLICAS   IMAGE          PORTS
+3mj5hm4z1u6z   nginx     replicated   3/3        nginx:latest   *:80->80/tcp
+
+docker ps
+root@ip-172-31-11-30:/home/ubuntu# docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS     NAMES
+43e9ad59d659   nginx:latest   "/docker-entrypoint.…"   2 minutes ago   Up 2 minutes   80/tcp    nginx.2.za4kbdf1clodwx5zniudej22s
+
+Worker :
+docker ps
+root@ip-172-31-39-127:/home/ubuntu# docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS     NAMES
+66b271f935b8   nginx:latest   "/docker-entrypoint.…"   4 minutes ago   Up 4 minutes   80/tcp    nginx.3.k0ir6pzviama7nf64djzecpsa
+eb05ece8e997   nginx:latest   "/docker-entrypoint.…"   4 minutes ago   Up 4 minutes   80/tcp    nginx.1.rr8pk9ickjxcimjqcr369by9s
+
