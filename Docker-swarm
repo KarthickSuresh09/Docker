@@ -3,18 +3,20 @@ Docker swarm
 * Manage a cluster of docker nodes as a single virtual systems.
 * Depoyl, Scale and Manage contarnized application across multiple nodes.
 
-_______________________________________________________________________________________________________________
+|______________________________________________________________________________________________________________|
 |                                                                                                              |
 |                 MASTER                               WORKER                                                  | 
 |               ----------------                    |------------------|                                       |
 |               |              |                    |                  |                                       |
-|               | 65.0.105.80  |                    |  3.110.87.96     |                                       |
-|               |              |                    |                  |                                       |
-|               |              |                    |                  |                                       |
+|               | 65.0.105.80  |                    |  3.110.87.96     |                                       | ====> Docker
+|               |              |                    |                  |                                       |       Swarm
+|               |              |                    |                  |                                       |      Cluster
 |               ----------------                    |------------------|                                       |
 |                                                                                                              |
 |                                                                                                              |
-________________________________________________________________________________________________________________
+|______________________________________________________________________________________________________________|
+
+
 Master step1 :
 docker swarm init
 docker swarm init --advertise-addr 65.0.105.80
@@ -22,8 +24,15 @@ docker swarm init --advertise-addr 65.0.105.80
 To remove docker swarm
 docker swarm leave --force
 
+Master Step2 :
+To cross verfiy docker node is running
+docker node ls
+root@ip-172-31-11-30:/home/ubuntu# docker node ls
+ID                            HOSTNAME          STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+t316qsy839nzepdl1mx58ggue *   ip-172-31-11-30   Ready     Active         Leader           28.0.4
 
-Worker Step 2
+
+Worker Step 3 :
 Swarm initialized: current node (t316qsy839nzepdl1mx58ggue) is now a manager.
 
 To add a worker to this swarm, run the following command:
@@ -31,3 +40,15 @@ To add a worker to this swarm, run the following command:
     docker swarm join --token SWMTKN-1-1meyvux1p11ng7m32hwz7vey9x5a6fxb4ucdl51iwi8mk8xme9-bf79iei0zirouimunj92jg0s3 65.0.105.80:2377
 
 To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
+Confiration of worker node
+This node joined a swarm as a worker.
+
+Master Ste4 :
+again to check worker added or not
+ID                            HOSTNAME           STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+t316qsy839nzepdl1mx58ggue *   ip-172-31-11-30    Ready     Active         Leader           28.0.4
+8h4wofa41s1b5oplnboqpl1ng     ip-172-31-39-127   Ready     Active                          28.0.4
+
+private IP Master Node: 172.31.11.30
+private IP Worker Node: 172.31.39.127
