@@ -133,3 +133,11 @@ volumes:
 
 
 Step 7 install linux tree package
+apt install tree
+
+Step 8 Installing docker-compose
+apt install docker-compose
+
+Step 9
+To run docker-compose.yaml file (execute this directory of where the docker-compose file)
+docker-compose up -d
