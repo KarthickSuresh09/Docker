@@ -1,1 +1,33 @@
+Docker swarm
+* Docker Swarm is docker's native container orchestration tool.
+* Manage a cluster of docker nodes as a single virtual systems.
+* Depoyl, Scale and Manage contarnized application across multiple nodes.
 
+_______________________________________________________________________________________________________________
+|                                                                                                              |
+|                 MASTER                               WORKER                                                  | 
+|               ----------------                    |------------------|                                       |
+|               |              |                    |                  |                                       |
+|               | 65.0.105.80  |                    |  3.110.87.96     |                                       |
+|               |              |                    |                  |                                       |
+|               |              |                    |                  |                                       |
+|               ----------------                    |------------------|                                       |
+|                                                                                                              |
+|                                                                                                              |
+________________________________________________________________________________________________________________
+Master step1 :
+docker swarm init
+docker swarm init --advertise-addr 65.0.105.80
+
+To remove docker swarm
+docker swarm leave --force
+
+
+Worker Step 2
+Swarm initialized: current node (t316qsy839nzepdl1mx58ggue) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-1meyvux1p11ng7m32hwz7vey9x5a6fxb4ucdl51iwi8mk8xme9-bf79iei0zirouimunj92jg0s3 65.0.105.80:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
