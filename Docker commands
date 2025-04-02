@@ -180,7 +180,22 @@ systemctl status docker
 Starting docker 
 sudo systemctl start docker
 
+To check docker-compose container running or not
 docker-compose ps
 
 To stop docker-compose container
 docker-compose down
+
+docker swarm init
+docker swarm init --advertise-addr 65.0.105.80
+
+To remove docker swarm
+docker swarm leave --force
+
+This command will check any docker is running
+docker node ls
+
+This command creating services not creating directly cluster
+docker service create --name nginx --replicas 3 -p 80:80 nginx
+
+docker service ls
