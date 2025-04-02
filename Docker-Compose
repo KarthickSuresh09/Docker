@@ -40,11 +40,12 @@ It allows you to run multiple Docker containers with a single YAML configuration
 3. Write the YAML file ==> 4. Run Docker compose run this YAML file
 
 
-Project/
-|_____ app/
-|      |__ app.py
-|      |__ requirements.txt
-|______ Docker-compose.yaml
+project/
+├── app
+│   ├── Dockerfile
+│   ├── app.py
+│   └── requirements.txt
+└── docker-compose.yml
 
 
 Step 1 create a folder structure
