@@ -141,3 +141,8 @@ apt install docker-compose
 Step 9
 To run docker-compose.yaml file (execute this directory of where the docker-compose file)
 docker-compose up -d
+
+
+Step 10 
+To stop docker-compose container
+docker-compose down
