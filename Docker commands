@@ -199,3 +199,7 @@ This command creating services not creating directly cluster
 docker service create --name nginx --replicas 3 -p 80:80 nginx
 
 docker service ls
+
+sudo usermod -aG docker jenkins
+
+sudo systemctl restart jenkins
