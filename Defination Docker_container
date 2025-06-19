@@ -5,6 +5,13 @@ so the application runs quickly and reliably from one computing environment to a
 A Docker container image is a lightweight, standalone, executable package of software 
 that includeseverything needed to run an application: code, runtime, system tools, system libraries and settings
 
+
+                              OR
+
+
+CONTAINER##
+  * Container is Nothing but an OS process, that behaves like a VM 
+
                      CONTAINER APPLICATION
 [ A ] [ A ] [ A ] [ A ]
 [ P ] [ P ] [ P ] [ P ]
