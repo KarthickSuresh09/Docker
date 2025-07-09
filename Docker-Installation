@@ -17,12 +17,13 @@ sudo apt-get update
 
 
 Step-2:
- Docker install command :
-# sudo apt  install docker.io
-
-         OR
-
+Real time Docker
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+                OR
+
+ Docker install command simpel one:
+# sudo apt  install docker.io
 
 
 
