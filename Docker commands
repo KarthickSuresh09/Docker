@@ -88,7 +88,8 @@ If you want to list all containers running state
 docker ps
 
 telling Docker to run or start a container from the NGINX image
-docker run -d nginx
+docker run -d nginx ===> it will run like -d means detached mode you dont see realtime logs.
+docker run nginx ===> it will run a foreground mode and it will show nginx real time logs after you need to give "ctrl + c".
 
 this is command docker stop this container  
 docker stop "Container ID"
