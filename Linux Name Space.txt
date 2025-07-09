@@ -1,0 +1,65 @@
+what is Name Space?
+Namespaces are a feature of the Linux kernel that partition kernel resources such that one set of processes sees one set of resources,
+while another set of processes sees a different set of resources. The feature works by having the same namespace for a set of resources and processes,
+
+📦 Why are namespaces useful?
+Namespaces are the foundation of containers (like Docker). They make each container believe it has its own:
+* Filesystem
+* Network
+* Users
+* Process list
+* Hostname
+* etc.
+
+| Namespace | Isolates...                            | Example Usage                           |
+| --------- | -------------------------------------- | --------------------------------------- |
+| `pid`     | Process IDs                            | Separate process trees                  |
+| `mnt`     | Mount points / filesystems             | Isolated file views                     |
+| `net`     | Network interfaces, IPs, routing       | Containers with their own network stack |
+| `uts`     | Hostname and domain name               | Each container has its own name         |
+| `ipc`     | System V and POSIX IPC (shared memory) | Separate inter-process communication    |
+| `user`    | User and group IDs                     | Root user inside container ≠ host root  |
+| `cgroup`  | Cgroup root and resource control       | Resource limits per namespace           |
+| `time`    | Time settings (since Linux 5.6)        | Custom clocks per container             |
+
+
+🐳 Example: Docker uses namespaces
+When you run a Docker container:
+* It runs in its own PID namespace (can’t see host processes)
+* Own network namespace (has its own IP)
+* Own filesystem (via mnt namespace)
+* Own user namespace (root inside ≠ root outside)
+
+Namespaces = Lightweight isolation of system resources, enabling containerization and multi-tenant environments without full virtualization.
+
+
+* process-A needs to run python_3
+* process-B needs to run python_2
+
+
+           |---------|                                   |---------|  
+python_3=> |Process-A|                                   |process-B|=> python_2 
+           |---------|                                   |---------|
+                ||                                           ||
+                ||                                           ||
+                ||                                           ||
+           |-----------|                                 |-----------|
+           |System_call|                                 |System_call|
+           |-----------|                                 |-----------|
+                ||                                            ||
+                ||                                            ||
+                ||                                            ||
+|---------------------------------------------------------------------------|
+|                            Linux--Kernal                                  |
+|---------------------------------------------------------------------------|
+                                  ||
+                                  ||
+                                  ||
+|---------------------------------------------------------------------------|
+|                               Hardware                                    |
+|---------------------------------------------------------------------------|
+
+
+* Linux NameSpace will split hardware a equaly to the all the process
+
+
