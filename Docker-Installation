@@ -1,3 +1,4 @@
+Step-1:
 prerequests for installing docker for realtime work
 # Add Docker's official GPG key:
 sudo apt-get update
@@ -15,7 +16,7 @@ sudo apt-get update
 
 
 
-
+Step-2:
  Docker install command :
 # sudo apt  install docker.io
 
