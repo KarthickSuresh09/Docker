@@ -1,3 +1,24 @@
+Hypervisor container method
+
+==> Hypervior application seperate OS
+
+
+[ A ] [ A ] [ A ] [ A ]
+[ P ] [ P ] [ P ] [ P ]
+[ P ] [ P ] [ P ] [ P ]
+[ o ] [ O ] [ o ] [ o ]
+[ s ] [ s ] [ s ] [ s ]
+|-----------------------|
+|       Hypervisor      |
+|-----------------------|
+| HOST OPERATING SYSTEM |
+|-----------------------|
+|       Hardware        |
+|-----------------------|
+
+
+
+
 What is Container? 
   
 A container is a standard unit of software that packages up code and all its dependencies
