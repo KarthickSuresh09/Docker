@@ -1,6 +1,7 @@
 Hypervisor container method
 
 ==> Hypervior application seperate OS
+==> operstional cost is very high
 
 
 [ A ] [ A ] [ A ] [ A ]
@@ -33,6 +34,12 @@ that includeseverything needed to run an application: code, runtime, system tool
 CONTAINER##
   * Container is Nothing but an OS process, that behaves like a VM 
 
+
+🔍 What is runc?
+runc is a CLI tool for spawning and running containers according to the Open Container Initiative (OCI) specification.
+It is written in Go and maintained by the OCI community, originally extracted from Docker's low-level runtime (libcontainer).
+
+
                      CONTAINER APPLICATION
 [ A ] [ A ] [ A ] [ A ]
 [ P ] [ P ] [ P ] [ P ]
@@ -40,7 +47,7 @@ CONTAINER##
 [   ] [   ] [   ] [   ]
 [ 1 ] [ 2 ] [ 3 ] [ 4 ]
 |-----------------------|
-|       DOCKER          |
+|       RUN=>c          |     ====
 |-----------------------|
 | HOST OPERATING SYSTEM |
 |-----------------------|
