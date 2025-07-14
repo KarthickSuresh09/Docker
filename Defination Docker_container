@@ -1,6 +1,6 @@
 Hypervisor container method
 
-==> Hypervior application seperate OS
+==> Hypervior applications have seperate OS
 ==> operstional cost is very high
 
 
@@ -12,7 +12,7 @@ Hypervisor container method
 |-----------------------|
 |       Hypervisor      |
 |-----------------------|
-| HOST OPERATING SYSTEM |
+|   OPERATING SYSTEM    |
 |-----------------------|
 |       Hardware        |
 |-----------------------|
@@ -47,16 +47,30 @@ It is written in Go and maintained by the OCI community, originally extracted fr
 [   ] [   ] [   ] [   ]
 [ 1 ] [ 2 ] [ 3 ] [ 4 ]
 |-----------------------|
-|       RUN=>c          |     ====
+|       RUN=>c          |     ====>
 |-----------------------|
 | HOST OPERATING SYSTEM |
 |-----------------------|
-|    INFRASTRUCTURE     |
+|       Hardware        |
 |-----------------------|
 
 it will list all the containers
 docker ps
 
+=====> Docker container Appliction
+
+[ A ] [ A ] [ A ] [ A ]
+[ P ] [ P ] [ P ] [ P ]
+[ P ] [ P ] [ P ] [ P ]
+[   ] [   ] [   ] [   ]
+[ 1 ] [ 2 ] [ 3 ] [ 4 ]
+|-----------------------|
+|       DOCKER          |     
+|-----------------------|
+| HOST OPERATING SYSTEM |
+|-----------------------|
+|    INFRASTRUCTURE     |
+|-----------------------|
 
 docker run -d nginx
 
