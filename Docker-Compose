@@ -96,7 +96,7 @@ volumes:
   db_data:
 
 
-Step 5 create a Dockerfile
+Step 5 create a Dockerfile(Inside app folder)
 FROM python:3.9-slim
 WORKDIR /app
 COPY requirements.txt .
