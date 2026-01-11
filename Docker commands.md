@@ -84,12 +84,12 @@ Global Options:
 
 Run 'docker COMMAND --help' for more information on a command.
 
-If you want to list all containers running state
+* If you want to list all containers running state
 ```
 docker ps
 ```
 
-telling Docker to run or start a container from the NGINX image
+* telling Docker to run or start a container from the NGINX image
 ```
 docker run -d nginx
 ```
@@ -100,14 +100,21 @@ docker run nginx
 ```
 ===> it will run a foreground mode and it will show nginx real time logs after you need to give "ctrl + c".
 
-this is command docker stop this container  
+
+* this is command docker stop this container  
+```
 docker stop "Container ID"
+```
 
-this is command docker start this container  
+* this is command docker start this container  
+```
 docker start "Container ID"
+```
 
-If you want to your reset a docker and it will delete container and images(DON'T USE THIS COMMAND IN PROD SERVER)
+* If you want to your reset a docker and it will delete container and images(DON'T USE THIS COMMAND IN PROD SERVER)
+```
 docker system prune --all
+```
 
 it will show the docker image
 docker images
