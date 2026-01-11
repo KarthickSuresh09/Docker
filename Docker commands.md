@@ -95,7 +95,9 @@ docker run -d nginx
 ```
  ===> it will run like -d means detached mode you dont see realtime logs.
 
-```docker run nginx```
+```
+docker run nginx
+```
 ===> it will run a foreground mode and it will show nginx real time logs after you need to give "ctrl + c".
 
 this is command docker stop this container  
