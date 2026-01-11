@@ -85,7 +85,9 @@ Global Options:
 Run 'docker COMMAND --help' for more information on a command.
 
 If you want to list all containers running state
+```
 docker ps
+```
 
 telling Docker to run or start a container from the NGINX image
 docker run -d nginx ===> it will run like -d means detached mode you dont see realtime logs.
