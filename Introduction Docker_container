@@ -39,6 +39,10 @@ CONTAINER##
 runc is a CLI tool for spawning and running containers according to the Open Container Initiative (OCI) specification.
 It is written in Go and maintained by the OCI community, originally extracted from Docker's low-level runtime (libcontainer).
 
+                                            OR
+
+runC is a lightweight, low-level container runtime that actually runs containers on a Linux system.
+
 
                      CONTAINER APPLICATION
 [ A ] [ A ] [ A ] [ A ]
