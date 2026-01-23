@@ -134,7 +134,7 @@ docker rmi IMAGE ID OR IMAGE NAME
 
 If you want to create an image 
 ```
-docker build -t  imagename.
+docker build -t  imagename .
 ```
 
 It will create the docker container
