@@ -133,7 +133,9 @@ docker rmi IMAGE ID OR IMAGE NAME
 
 
 If you want to create an image 
-docker build -t my-node-app .
+```
+docker build -t  imagename.
+```
 
 It will create the docker container
 docker run "image name" ===> this method will lock cmd
