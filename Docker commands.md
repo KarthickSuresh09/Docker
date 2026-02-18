@@ -117,20 +117,28 @@ docker system prune --all
 ```
 
 it will show the docker image
+```
 docker images
+```
 
 If you want to stop conatiner 
+```
 docker stop CONTAIER ID OR CONTAINER NAME
+```
 
 If you want to list all the containers stop and running state
+```
 docker ps -a
+```
 
 It will remove the container
+```
 docker rm CONTAIER ID OR CONTAINER NAME
-
+```
 It will remove the image
+```
 docker rmi IMAGE ID OR IMAGE NAME
-
+```
 
 If you want to create an image 
 ```
